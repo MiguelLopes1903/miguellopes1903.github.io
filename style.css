@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo geral */
+body {
+    background-color: #fff;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Cabeçalho e menu */
+header {
+    
+    background: #9400D3;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+}   
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+/* Conteúdo principal */
+main.home {
+    max-width: 800px;
+    margin: 100px auto;
+    text-align: center;
+    color:#222;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px;
+}
+.curriculo{
+    width: 80%;
+    margin: 50px auto;
+}
+
+/* Seções */
+section {
+    margin-bottom: 40px;
+}
+
+main.h2 {
+    color: #222;
+    margin: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+li{
+    margin: 0px auto;
+}
+
+/* Portfólio */
+.projetos {
+    text-align: center;
+    width: 50%;
+    margin: 100px auto;
+    gap: 10px;
+    display: grid;
+    margin-bottom: 50%;
+}
+
+.projetos img {
+    width: 100%;
+    border-radius: 8px;
+}
+.container{
+    text-align: center;
+    margin: 250px auto;
+    width: 50%;
+}
+.contato{
+    margin: 100px auto;
+    width: 50%;
+    text-align: center;
+}
+.home img{
+    width: 250;
+    
+}
+img.perfil{
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 6px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #ff9800;
+}
+
+/* Rodapé */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #9400D3;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/*Sistema de JavaScript para validação de Mensagem*/
+.msg{
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+            
+}
+.sucesso{
+    color: greenyellow;
+}
+.erro{
+    color:red
+}
+
+/*Aba de Portifólio*/
+.grid-projetos{
+    display:grid;
+    gap: 20px;
+    margin-top: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(250,1fr));
+}
+.projeto{
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px;
+    text-align: center;
+    transition:transform 1s,box-shadow 1s;
+}
+.projeto:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px;
+}
+
+/*Aba de Novidade*/
+ul.att{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+ul.att li{
+    background:white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px;
+    transition: transform 1s,box-shadow 1s;
+}

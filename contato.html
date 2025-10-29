@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contato</h1>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="novidades.html">Novidades</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="contato">
+        <div class="contato">
+        <section>
+            <h2>Fale comigo</h2>
+            <br><br>
+            <form action="#" method="post">
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                <br>
+                <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                <br>
+                <textarea name="mensagem" id="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+                <br>
+                <button type="submit">Enviar</button>
+                <div id="msgRetorno" class="msg"></div>
+            </form>
+            <br><br>
+
+            <h3>Minhas Redes</h3>
+            <p>
+                <a href="https://www.linkedin.com/in/miguel-felipez-65146a366">LinkedIn</a> | 
+                <a href="https://github.com/MiguelLopes1903">GitHub</a> | 
+                <a href="https://www.instagram.com/lopezzz.bf?igsh=c3VpaXQzenNrdmFj">Instagram</a>
+            </p>
+        </section>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementById("contato");
+        const Retorno = document.getElementById("msgRetorno")
+
+        form.addEventListener("submit",function(event) {
+            event.preventDefault();
+            const nome = document.getElementById("nome").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const mensagem = document.getElementById("mensagem").value.trim();
+
+            if(nome===""|| email===""|| mensagem===""){
+                Retorno.textContent = "Alguns campos não estão devidamente preenchidos";
+                Retorno.className = "msg erro";
+                return;
+            }
+            if(!email.includes("@")||!email.includes(".")){
+                Retorno.textContent = "email invalido";
+                Retorno.className = "msg erro";
+                return;
+            }
+
+            Retorno.textContent = "Email enviado";
+            Retorno.className = "msg sucesso";
+            form.reset();
+            
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2025 - Meu Site Pessoal</p>
+    </footer>
+</body>
+</html>
